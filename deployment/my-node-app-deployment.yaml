@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: my-node-app
+  name: my-node-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-node-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: my-node-app
+    spec:
+      containers:
+      - image: nourhankhalifa/my-node-app:v1
+        name: my-node-app
+        resources: {}
+      imagePullSecrets:
+      - name: my-node-app-docker-secret 
+status: {}
