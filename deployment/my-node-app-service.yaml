@@ -3,16 +3,16 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: my-node-app
-  name: my-node-app-service
+    app: my-node-app-v2
+  name: my-node-app-service-v2
 spec:
   ports:
   - port: 3000
     protocol: TCP
     targetPort: 3000
-    nodePort: 30000
+    nodePort: 30001
   selector:
-    app: my-node-app
+    app: my-node-app-v2
   type: NodePort
 status:
   loadBalancer: {}
