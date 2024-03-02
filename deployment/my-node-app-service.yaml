@@ -10,9 +10,9 @@ spec:
   - port: 3000
     protocol: TCP
     targetPort: 3000
-    nodePort: 30000
+      #nodePort: 30000
   selector:
     app: my-node-app
-  type: NodePort
+  type: ClusterIP
 status:
   loadBalancer: {}
