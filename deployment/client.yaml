@@ -5,6 +5,7 @@ metadata:
   labels:
     run: client
   name: client
+  namespace: my-node-app
 spec:
   containers:
   - image: curlimages/curl
@@ -12,7 +13,7 @@ spec:
     args:
     - -c
     - |
-      while true; do curl http://my-node-app-service:3000 ; done
+      while true; do curl http://my-node-app-v1-service:3000 ; done
     command:
     - /bin/sh
     resources: {}
