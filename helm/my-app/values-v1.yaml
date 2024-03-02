@@ -1,0 +1,13 @@
+namespace: my-node-app
+replicaCount: 1
+dockerConfigJson: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJub3VyaGFua2hhbGlmYSIsInBhc3N3b3JkIjoiQERlbGwyMDIyIiwiZW1haWwiOiJub3VyaGFuLmtoYWxpZmExMkBnbWFpbC5jb20iLCJhdXRoIjoiYm05MWNtaGhibXRvWVd4cFptRTZRRVJsYkd3eU1ESXkifX19 
+image:
+  repository: nourhankhalifa/my-node-app
+  tag: v1
+
+imagePullSecret:
+  name: my-node-app-docker-secret
+service:
+  type: ClusterIP
+  port: 3000
+  targetport: 3000
